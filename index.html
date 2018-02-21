@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Form</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+</head>
+<body>
+
+<div class="container">
+    <h2>Registration Form</h2>
+    <form class="form-horizontal" method="post" onsubmit="return validation();" action="output.html">
+<!--FirstName-->
+        <div class="form-group">
+          <div class="row">
+            <label class="control-label col-sm-2" for="fname">First Name:</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="fname" placeholder="Enter your first name" name="fname">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-2"></div>
+            <div class="col-sm-10">
+              <p id="fname-error-msg" style="color: red"></p>
+            </div>
+          </div>
+        </div>
+<!--LastName-->
+        <div class="form-group">
+          <div class="row">
+            <label class="control-label col-sm-2" for="lname">Last Name:</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="lname" placeholder="Enter your last name" name="lname">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-2"></div>
+            <div class="col-sm-10">
+              <p style="color: red"></p>
+            </div>
+          </div>
+        </div>
+ <!--EmailId-->
+        <div class="form-group">
+          <div class="row">
+            <label class="control-label col-sm-2" for="email">Email:</label>
+            <div class="col-sm-10">
+                <input type="email" class="form-control" id="email" placeholder="Enter Email Id" name="email">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-2"></div>
+            <div class="col-sm-10">
+              <p id="email-err-msg" style="color: red"></p>
+            </div>
+          </div>
+        </div>
+<!--ConfirmMailId-->
+        <div class="form-group">
+          <div class="row">
+            <label class="control-label col-sm-2" for="cnfMail">Confirm Email Id:</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="cnfMail" placeholder="Confirm Email Id" name="cnfMail">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-2"></div>
+            <div class="col-sm-10">
+              <p id="confirm-email-err-msg" style="color: red"></p>
+            </div>
+          </div>
+        </div>
+ <!--Gender-->
+        <div class="form-group">
+          <div class="row">
+            <label class="control-label col-sm-2" >Gender:</label>
+            <div class="col-sm-10">
+                    <div class="radio">
+                        <label><input id="male" type="radio" name="gender">Male</label>
+                    </div>
+                    <div class="radio">
+                        <label><input id="female" type="radio" name="gender">Female</label>
+                    </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-2"></div>
+            <div class="col-sm-10">
+              <p id="gender-err-msg" style="color: red"></p>
+            </div>
+          </div>
+
+        </div>
+<!--PhoneNo-->
+        <div class="form-group">
+          <div class="row">
+            <label class="control-label col-sm-2" for="phnNo">Phone No:</label>
+            <div class="col-sm-10">
+                <input type="number" class="form-control" id="phnNo" placeholder="Enter phone number" name="phnNo">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-2"></div>
+            <div class="col-sm-10">
+              <p id="phone-err-msg" style="color: red"></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+                <button type="submit" onclick="getAjaxData();" class="btn btn-primary">Submit</button>
+            </div>
+        </div>
+
+    </form>
+
+<!--
+    <table id="myTable" class ="table">
+    <tr class = "success">
+    <th>Id</th>
+    <th>First Name</th>
+    <th>Last Name</th>
+    <th>Avatar</th>
+    </tr>
+    </table> -->
+
+</div>
+
+
+</body>
+</html>
